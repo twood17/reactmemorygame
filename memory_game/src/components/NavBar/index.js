@@ -15,7 +15,7 @@ function Navbar(props) {
                     May the Force be with you!
                 </li>
                 <li className="score">
-                    Score: {props.score} | Top Score: {props.topscore}
+                    Score: {props.score || 0} | Top Score: {props.topscore || 0}
                 </li>
             </ul>
         </div>

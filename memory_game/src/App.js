@@ -5,7 +5,6 @@ import Footer from './components/Footer'
 import ImageCard from './components/ImageCard'
 import Header from './components/Header'
 import images from './images.json'
-import './App.css';
 
 class App extends Component {
   state = {

@@ -1,8 +1,9 @@
+    
 .footer {
-    background: #070707;
-    height: 80px;
+    background: darkgreen;
+    height: 100px;
     position: relative;
-    color: darkred;
+    color: white;
     overflow: auto;
 }
 
@@ -11,7 +12,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #146c06;
+    background: black;
     padding: 8px;
     font-weight: 600;
 } 
