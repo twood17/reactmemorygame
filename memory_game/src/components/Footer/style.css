@@ -1,0 +1,22 @@
+.footer {
+    background: #070707;
+    height: 80px;
+    position: relative;
+    color: darkred;
+    overflow: auto;
+}
+
+.footer>.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #146c06;
+    padding: 8px;
+    font-weight: 600;
+} 
+
+.footer img {
+    height: 30px;
+    width: 32px;
+}

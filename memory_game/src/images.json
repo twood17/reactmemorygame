@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Vitiate",
+        "image": "../images/vitiate.jpg",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "name": "Darth Krayt",
+        "image": "../images/darth_krayt.jpg",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "Darth Malak",
+        "image": "../images/darth_malak.jpg",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "Darth Nihilius",
+        "image": "../images/darth_nihilius.png",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "Darth Revan",
+        "image": "../images/darth_revan.jpg",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Darth Sion",
+        "image": "../images/darth_sion.jpg",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Darth Traya",
+        "image": "../images/darth_traya.jpg",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Emperor Palpatine",
+        "image": "../images/emperor_palpatine.jpg",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Exar Kun",
+        "image": "../images/ExarKun.jpg",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "Hero Tython",
+        "image": "../images/hero_tython.png",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "Mace Windu",
+        "image": "../images/mace_windu.jpg",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Marka Ragnos",
+        "image": "../images/marka_ragnos.jpg",
+        "clicked": false
+    }
+]
