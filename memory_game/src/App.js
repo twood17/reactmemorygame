@@ -43,8 +43,8 @@ handleOnClick = id => {
   let clickedImage = this.state.images.filter(
     image => image.id === id)[0];
 
-  //filters images that have already been clicked
-  let alreadyBeenClicked = this.state.images.filter(
+  //sets the clicked attr to true for all the images to be called later
+  let gameReset = this.state.images.filter(
     image => image.clicked === true
   );  
 
@@ -59,7 +59,9 @@ handleOnClick = id => {
       topscore: this.state.score + 1 > this.state.topscore ? this.state.score + 1 : this.state.topscore
     });   
   } else if (clickedImage.clicked === true) { 
-    alreadyBeenClicked.forEach(image => {
+  //calls the gameReset variable to set all the clicked attr to true, so they can all be reset to 
+  //false to start the game over
+    gameReset.forEach(image => {
       image.clicked = false;
     });  
     this.shuffleArray(images)
@@ -67,12 +69,9 @@ handleOnClick = id => {
       score: 0,
     })
   }
-
-  console.log(this.state.images)
-  console.log(this.state.score);
-  console.log(this.state.topscore);
 }
 
+  //render the page
   render() {
     return (
       <>      
