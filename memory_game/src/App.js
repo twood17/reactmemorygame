@@ -7,11 +7,15 @@ import Header from './components/Header'
 import images from './images.json'
 
 class App extends Component {
- state = {
+ constructor(props) {
+   super(props)
+  this.state = {
     images,
     score: 0,
-    topscore: 0
+    topscore: 0,
   };
+  this.handleOnClick = this.handleOnClick.bind(this)
+}
 
   shuffleArray = array => {
     let currentIndex = array.length,
@@ -35,48 +39,38 @@ class App extends Component {
 
 handleOnClick = id => {
   //grabs the id of the clicked image
+  
   let clickedImage = this.state.images.filter(
-    image => image.id === id);
+    image => image.id === id)[0];
 
   //filters images that have already been clicked
-  let beenClicked = this.state.images.filter(
-    image => image.clicked === true);
+  let alreadyBeenClicked = this.state.images.filter(
+    image => image.clicked === true
+  );  
 
   //handles switching the array to true and shuffles the images
-  if (!clickedImage.clicked) {
+  if (clickedImage.clicked === false) {
     clickedImage.clicked = true;
     this.shuffleArray(images);
 
     //changes score and topscore state
     this.setState({
-      score: this.state.score + 1, 
-      topscore: this.state.score + 1 > this.state.topscore
-        ? this.state.score + 1 
-        : this.state.topscore
+      score: this.state.score + 1 , 
+      topscore: this.state.score + 1 > this.state.topscore ? this.state.score + 1 : this.state.topscore
     });   
-  }  
-
-  console.log(this.state.topscore)
-
-  if (this.state.score === 12) {
-    this.setState({
-      score: 0
-    });
-    this.shuffleArray(images);
-    beenClicked.forEach(image => {
+  } else if (clickedImage.clicked === true) { 
+    alreadyBeenClicked.forEach(image => {
       image.clicked = false;
-    });
-  } else {
-    beenClicked.forEach(image => {
-      image.clicked = false;
-    });
-    
-    this.shuffleArray(images);
-
+    });  
+    this.shuffleArray(images)
     this.setState({
-      score: 0
-    });
+      score: 0,
+    })
   }
+
+  console.log(this.state.images)
+  console.log(this.state.score);
+  console.log(this.state.topscore);
 }
 
   render() {
